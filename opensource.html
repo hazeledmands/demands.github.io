@@ -1,0 +1,19 @@
+---
+layout: default
+title: Open Source | Max Edmands
+---
+<section id="opensource">
+  <hgroup>
+    <h1>Open Source</h1>
+    <h2>These are some projects that I'm proud to show off.</h2>
+  </hgroup>
+<script type="text/javascript">
+  var ME = {};
+  (function() {
+   ME.githubAPIResponse = function(data) {
+    document.write(JSON.stringify(data));
+   };
+   }());
+</script>
+</section>
+<script type="text/javascript" src="https://api.github.com/users/demands/repos?callback=ME.githubAPIResponse"></script>

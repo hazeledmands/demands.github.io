@@ -1,0 +1,17 @@
+---
+layout: default
+title: Notes &amp; Writing | Max Edmands
+---
+<section id="notes">
+  <hgroup>
+    <h1>Notes &amp; Writing</h1>
+    <h2>I might add to this page every once in a while.</h2>
+  </hgroup>
+  {% for post in site.categories.notes %}
+  <article>
+    <header>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </header>
+  </article>
+  {% endfor %}
+</section>

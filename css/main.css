@@ -1,0 +1,464 @@
+/* @override 
+	http://projects.maxedmands.com/new/css/style.css?v=2
+	http://maxedmands.dev/css/style.css
+*/
+
+/* @group Rules Reset! */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+body { font:13px/1.231 sans-serif; *font-size:small; }
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* @end */
+
+/* @group Minimal Base Styles */
+
+html { overflow-y: scroll; }
+a:hover, a:active { outline: none; }
+
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; }
+
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* @end */
+
+/* @group Mobile First! Styles go here. */
+
+body, select, input, textarea {
+  color: #444;
+  font-family: 'Minion Pro', 'Minion', 'Times', 'Times New Roman', serif;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+.animating {
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 197%;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 197%;
+  font-weight: 600;
+}
+
+body {
+  background: #000;
+}
+
+.response {
+  border: 2px solid #ccc;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.response-error {
+  border-color: #f00;
+  color: #f00;
+}
+
+
+
+#container {
+  background: #e0dbc8;
+}
+
+#container > header {
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+}
+
+#container > header .wrap {
+  padding: 1em 15px;
+  background: url(../img/crosshatch-dark.png);
+  max-width: 424px;
+  margin: 0 auto;
+}
+
+#container > header .wrap:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#container > header a {
+  color: #000;
+  text-decoration: none;
+}
+
+#container > header a:hover {
+	color: #22a;
+}
+
+#container > header a:active,
+#container > header a.active {
+	color: #f00;
+}
+
+#container > header hgroup a {
+  display: block;
+  float: left;
+}
+
+#container > header hgroup h1 {
+  text-transform: lowercase;
+  text-indent: -999em;
+  background: transparent url(../img/name-and-fish.png) left top no-repeat;
+  width: 153px;
+  height: 110px;
+}
+
+#container > header hgroup a:hover h1 {
+  margin-left: 2px;
+}
+
+#container > header nav {
+  float: right;
+  font-size: 133%;
+  padding: 10px;
+}
+
+#container > header nav a {
+  background: transparent url(../img/links.png) left top no-repeat;
+  text-indent: -999em;
+  display: block;
+  width: 225px;
+  height: 32px;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+#container > header nav a:hover {
+  margin-right: 2px;
+}
+
+#container > header nav a:active {
+  margin-right: 4px;
+}
+
+#container nav .essays-link {
+  background-position: 0 -36px;
+}
+
+#container nav .oss-link {
+  background-position: 0 -71px;
+}
+
+#container > section {
+  clear: both;
+  padding-top: 11em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#container > section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#container > section hgroup {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin: 15px;
+	margin-top: 0;
+	border-bottom: 1px dashed #aaa;
+	text-align: center;
+}
+
+#container > section hgroup h2 {
+	margin-top: 0.5em;
+	font-size: 140%;
+	font-weight: 100;
+}
+
+#about_me {
+  background: url(../img/about_bg/letchworth.jpg) center bottom no-repeat;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#about_me .speech-bubble {
+  padding-bottom: 40px;
+  padding-top: 0.5em;
+  background: transparent url(../img/speechbubbledown.png) center bottom no-repeat;
+  max-width: 454px;
+  margin: 0 auto;
+}
+
+#about_me .speech-bubble > * {
+  background: #ededed url(../img/crosshatch.gif);
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.4em;
+}
+
+#about_me h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#about_me p {
+  padding-bottom: 10px;
+  font-size: 130%;
+}
+
+#about_me p:last-child {
+  padding-bottom: 20px;
+}
+
+#about_me #portrait {
+  padding-top: 20px;
+  width: 219px;
+  margin: 0 auto;
+}
+
+#about_me #portrait img {
+  display: block;
+}
+
+#notes {
+	background: url(../img/bg3.png) left top repeat-x;
+  padding-bottom: 15px;
+}
+
+#notes article {
+	margin: 15px auto;
+	padding: 5px 15px;
+	border-bottom: 1px solid #ccc;
+  max-width: 500px;
+}
+
+#notes article:last-child {
+	border-bottom: none;
+}
+
+#notes article header {
+	text-align: center;
+	margin: 15px 0;
+}
+
+#notes article h2 {
+	font-weight: 100;
+	font-size: 300%;
+}
+
+#notes article section {
+	margin: 15px 0;
+	font-size: 125%;
+	line-height: 1.3em;
+}
+
+#notes article .images img {
+	width: 100%;
+}
+
+#essays {
+	background: #ccc url(../img/bg3.png) left top repeat-x;
+	padding-bottom: 15px;
+}
+
+#essays .content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#essays article.spotlight {
+	padding: 15px;
+	position: relative;
+}
+
+#essays article.spotlight a {
+	color: white;
+	text-decoration: none;
+  height: 330px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+#essays article.spotlight img {
+	width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#essays article.spotlight hgroup {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 50%;
+	background: rgba(0,0,0,0.75);
+	text-align: right;
+	padding: 10px 15px;
+	border: none;
+}
+
+#essays section h1 {
+  font-size: 120%;
+  margin-bottom: 10px;
+}
+
+#essays section ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#essays section.archives {
+  float: right;
+  margin: 15px;
+}
+
+#essays section.archives ul {
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+#essays section.article-list {
+  margin: 15px;
+  margin-right: 150px;
+}
+
+#essays section.article-list li {
+  margin-bottom: 10px;
+}
+
+#contact {
+	background: url(../img/bg3.png) left top repeat-x;
+}
+
+#contact form {
+	padding: 15px;
+}
+
+#contact form textarea {
+	display: block;
+	width: 90%;
+	padding: 5%;
+	margin: 10px 0;
+	min-height: 200px;
+}
+
+#contact form label {
+}
+
+#contact form input {
+	display: block;
+}
+
+#contact form .error {
+  border: 2px solid #f00;
+}
+
+#contact form input.submit {
+	margin: 10px 0;
+}
+
+/* @end */
+
+@media only screen and (min-width: 590px) {
+
+
+
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+

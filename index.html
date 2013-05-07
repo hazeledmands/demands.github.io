@@ -1,0 +1,34 @@
+---
+layout: default
+title: Max Edmands, web app developer
+---
+<script type="text/javascript">
+  var ME = {};
+  (function() {
+    var startTime = new Date(1996, 3, 13).getTime();
+    var match = /^(\d+)(\d{3})/;
+    ME.timeInBusiness = function() {
+      var minutes = ((new Date().getTime() - startTime) / (1000 * 60)).toFixed(2);
+      while (match.test(minutes)) { minutes = minutes.replace(match, '$1,$2'); }
+      return minutes;
+    };
+  }());
+</script>
+
+<section id="about_me">
+<div class="speech-bubble">
+<h1>It's awesome to meet you!</h1>
+    <p>I am a <strong>web application developer</strong> who enjoys <strong>enjoys exploring the world</strong> and <strong>cares about sustainability</strong>. I have been in this business for <span id="minutes-in-business"><script type="text/javascript">document.write(ME.timeInBusiness());</script></span> minutes and I still think it's great.</p>
+    <p>I live in <strong>San Francisco, California</strong>, and I work for <strong><a href="http://goodeggs.com">Good Eggs</a></strong>.</p>
+  </div>
+  <div id=portrait>
+    <img src=img/me.png alt="A picture of me!" height=426 width=219 title="Maybe sometime I'll think of something funny to say here." />
+	</div>
+</section>
+
+<script type="text/javascript">
+  (function() {
+    var elem = document.getElementById('minutes-in-business');
+    window.setInterval(function() { elem.textContent = ME.timeInBusiness(); }, 100);
+  }());
+</script>

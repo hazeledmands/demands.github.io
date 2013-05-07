@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+    Max Edmands -- Web Application Developer -- github.com/demands
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Html 5 Boilerplate
+    Normalize.css, Modernizr
