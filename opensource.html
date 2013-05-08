@@ -7,13 +7,27 @@ title: Open Source | Max Edmands
     <h1>Open Source</h1>
     <h2>These are some projects that I'm proud to show off.</h2>
   </hgroup>
-<script type="text/javascript">
-  var ME = {};
-  (function() {
-   ME.githubAPIResponse = function(data) {
-    document.write(JSON.stringify(data));
-   };
-   }());
-</script>
+
+  <script type="text/javascript">
+    var ME = {};
+    (function() {
+     ME.githubAPIResponse = function(response) {
+       var repo = undefined;
+       if(!response.meta || response.meta.status !== 200) {
+         document.write('Something went wrong.');
+       } else {
+         for(index in response.data) {
+           repo = response.data[index];
+           if(!repo.fork) {
+           document.write("<h1><a href='" + repo.html_url + "' target='_blank'>" + repo.name + "</a></h1>");
+           }
+         }
+         document.write('<pre>' + JSON.stringify(response.data, null, 4) + '</pre>');
+       }
+     };
+     }());
+  </script>
+
 </section>
-<script type="text/javascript" src="https://api.github.com/users/demands/repos?callback=ME.githubAPIResponse"></script>
+
+<script type="text/javascript" src="https://api.github.com/users/demands/repos?type=public&sort=pushed&per_page=20&callback=ME.githubAPIResponse"></script>
