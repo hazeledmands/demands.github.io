@@ -54,12 +54,11 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 /* @group Minimal Base Styles */
 
-.no-js-fallback {
+html.js .no-js-fallback {
   display: none;
 }
-
-.no-js span.no-js-fallback {
-  display: inline;
+html.no-js .js-only {
+  display: none;
 }
 
 html { overflow-y: scroll; }

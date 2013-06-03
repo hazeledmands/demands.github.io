@@ -5,11 +5,13 @@ title: Open Source | Max Edmands
 <section id="opensource">
   <hgroup>
     <h1>Open Source</h1>
-    <h2>These are some projects that I'm proud to show off.</h2>
+    <h2>
+      <span class="no-js-fallback">Take a look at <a href="http://github.com/demands">my GitHub account</a> to see some of the work I'm proud of! (Or, enable JavaScript in your browser and see my work right here.)</span>
+      <span class="js-only">These are some projects that I'm proud to show off.</span>
+    </h2>
   </hgroup>
 
   <script type="text/javascript">
-    var ME = {};
     (function() {
      ME.githubAPIResponse = function(response) {
        var repo = undefined;
@@ -30,4 +32,5 @@ title: Open Source | Max Edmands
 
 </section>
 
+<script type="
 <script type="text/javascript" src="https://api.github.com/users/demands/repos?type=public&sort=pushed&per_page=20&callback=ME.githubAPIResponse"></script>
