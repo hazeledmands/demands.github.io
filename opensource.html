@@ -2,6 +2,7 @@
 layout: default
 title: Open Source | Max Edmands
 ---
+
 <section id="opensource">
   <hgroup>
     <h1>Open Source</h1>
@@ -11,26 +12,71 @@ title: Open Source | Max Edmands
     </h2>
   </hgroup>
 
-  <script type="text/javascript">
-    (function() {
-     ME.githubAPIResponse = function(response) {
-       var repo = undefined;
-       if(!response.meta || response.meta.status !== 200) {
-         document.write('Something went wrong.');
-       } else {
-         for(index in response.data) {
-           repo = response.data[index];
-           if(!repo.fork) {
-           document.write("<h1><a href='" + repo.html_url + "' target='_blank'>" + repo.name + "</a></h1>");
-           }
-         }
-         document.write('<pre>' + JSON.stringify(response.data, null, 4) + '</pre>');
-       }
-     };
-     }());
-  </script>
+  <div class="js-only">
+    <div id="events-list">
+      <span class="loading">Loading...</span>
+    </div>
 
-</section>
+    <div id="my-projects">
+      <span class="loading">Loading...</span>
+    </div>
 
-<script type="
-<script type="text/javascript" src="https://api.github.com/users/demands/repos?type=public&sort=pushed&per_page=20&callback=ME.githubAPIResponse"></script>
+    <div id="my-contributions">
+      <span class="loading">Loading...</span>
+    </div>
+
+    <pre id="github-data">
+    </pre>
+  </div>
+
+<script type="text/javascript">
+(function(ME) {
+
+ var $githubData = document.getElementById('github-data');
+
+ function EventEntry(event) {
+ }
+
+ function EventsList(events) {
+   var index;
+   this.$el = document.getElementById('events-list');
+
+   this.events = [];
+   for(var index in events) {
+     this.events.push(new EventEntry(events[index]));
+   }
+ }
+
+ EventsList.prototype.getWidth = function() {
+   return parseInt(window.getComputedStyle(this.$el).width);
+ }
+
+ EventsList.prototype.render = function() {
+   var index, event, ctx;
+
+   this.$canvas = document.createElement('canvas');
+   if(!this.$canvas.getContext) return;
+   this.$canvas.setAttribute('height', 50);
+   this.$canvas.setAttribute('width', this.getWidth());
+
+   ctx = this.$canvas.getContext('2d');
+   for(index in this.events) {
+     event = this.events[index];
+   }
+   ctx.fillStyle = "rgb(100,0,0)";
+   ctx.fillRect(0, 0, 100, 50);
+   this.$el.innerHTML = "";
+   this.$el.appendChild(this.$canvas);
+ }
+
+ ME.EventsList = EventsList;
+ ME.EventsList.response = function(response) {
+   var myEvents = new EventsList(response.data);
+   myEvents.render();
+   $githubData.innerHTML = JSON.stringify(response.data, null, 4);
+ }
+
+}(window.ME));
+</script>
+
+<script type="text/javascript" src="https://api.github.com/users/demands/events?callback=ME.EventsList.response"></script>
