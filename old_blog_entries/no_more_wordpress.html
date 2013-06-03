@@ -1,0 +1,140 @@
+<div id="wrapper">		<div id="entry">
+						<div id="prev_button">
+				<a href="http://blog.maxedmands.com/post/clarkson-eco-contest"><img src="http://blog.maxedmands.com/prev.gif" alt="Previous post" title="Clarkson ECO contest"></a>
+			</div>
+						<div id="next_button">
+				<a href="http://blog.maxedmands.com/post/fbjs-dom-traversal"><img src="http://blog.maxedmands.com/next.gif" alt="Next post" title="Traversing the DOM with Facebook's JavaScript"></a>
+			</div>
+						
+			<h1>No more WordPress</h1>
+			<img src="http://blog.maxedmands.com/images/wordpress_rip.jpg" style="padding: 5px; border: 1px solid #ccc; float:right; margin: 0 0 10px 10px;"><p>Adios, <a href="http://www.wordpress.org">WordPress</a>. While you are gorgeous, and an excellent blogging platform, I don't think you are right for me anymore. Instead, I have moved on to a hand-coded, simple, PHP/MySQL blog. I am still tweaking it, ironing out the fine points, and making it exactly the way that I want it to be. However, I thought I would blog about the process, especially since it's been so long since you've heard from me.</p>
+
+<h3>The catalyst: My WordPress installation got hacked</h3>
+
+<p>I am not entirely sure how this happened, but my old WordPress installation (I was running 2.7) was compromised in a very strange way. I'm assuming there were vulnerabilities in the source that were probably patched in 2.8, but I searched <a href="http://whimsley.typepad.com/whimsley/2008/03/mr-googles-guid.html">Mr. Google's Guidebook</a> for similar problems and had no luck. The blog looked and -- for the most part -- acted fine, but whenever I tried to "preview" a post I was writing, I would be redirected to a <a href="http://en.wikipedia.org/wiki/Link_farm">link-farm</a> style site featuring porn, warez, and sketchiest of all, a disc image file that tried to automatically download. I've not heard much about viruses for macs, but I would not have been surprised if this was one.</p>
+
+<p>Probably because I was inadvertently linking into a link farm, Google stopped including <a href="http://blog,maxedmands.com">blog.maxedmands.com</a> in its search results. While the lack of "preview" functionality was annoying, having no coverage on Google was completely unacceptable. Accordingly, I started thinking about how I was going to resolve this problem.</p>
+
+<h3>The other catalyst: My old layout annoyed me</h3>
+
+<p>I am a sucker for minimalism. According to my theory, the less extra fluff a web layout has, the easier it will be for the reader (the user) to find what he or she wants. This is one of the reasons I like Google products so much; they just do what you want and don't bother you with extra information. The pros agree with me: Strunk and White's <em>Elements of Style</em> touts minimalism with an appeal to "<a href="http://www.bartleby.com/141/strunk5.html">omit needless words</a>" in writing. Why should <a href="http://en.wikipedia.org/wiki/Minimalism#Minimalist_design">design</a> or <a href="http://www.two-sdg.demon.co.uk/curbralan/papers/minimalism/OmitNeedlessCode.html">code</a> be any different?</p>
+
+<p>My old layout met my minimalist ideal about halfway. It wasn't terrible, but a lot of precious screen real-estate was spent on a sidebar with multiple links to the same content. For example, I was given the option to include a "monthly archive" section, so that users could click on an individual month and see all the things I posted that month. However, I only post on average about once a month, so users would only see one post. I considered deleting these sidebar links, but I had nothing to replace them with, and I didn't want to leave my users with an awkward empty expanse on the right side of the screen. I wanted a new layout, one more similar to, for example, <a href="http://diveintomark.org/">Mark Pilgrim's</a>, which eschews ALL stereotypical "blog" elements: no sidebar, no title, no list of links at the top of the screen, only content.</p>
+
+<p>I had plans to make my own WordPress theme (I've done this before, and it isn't terribly difficult). However, WordPress had many built-in features that I don't necessarily care about. Why include the extra bulk, I thought, when I could make my own blogging platform that included only the features that I wanted? Plus, in theory, I would gain some coding experience and learn a thing or two about technologies that I have never used.</p>
+
+<h3>The design</h3>
+
+<p>Cool text editors are fun. I design and code on a Mac, and for web stuff I usually use a combination of <a href="http://macromates.com/">TextMate</a> (which is beginning to show signs of age), <a href="http://www.panic.com/transmit/">Transmit</a>, and <a href="http://macrabbit.com/cssedit/">CSSEdit</a>. However, because I had recently gotten a shiny new copy of <a href="http://macrabbit.com/espresso/">Espresso</a> I gave it a quick spin.</p>
+
+<img src="http://blog.maxedmands.com/images/font_comparison.png" style="padding: 5px; border: 1px solid #ccc; float:left; margin: 10px 10px 10px 0;"><p>I just finished taking a class in Typography and Design, and I wanted to try to make use of some of the principles of that class in my new blog design. Since my blog has no purpose, at this point, other than to record my thoughts and feelings occasionally, I thought it would be a good idea to make it look classy, but not too serious. My ideal typeface choice, with this in mind, was <a href="http://en.wikipedia.org/wiki/Minion_%28typeface%29">Minion</a>, an awesome typeface owned by Adobe. Given that  most people do not have this font installed on their computer, I chose Microsoft's <a href="http://en.wikipedia.org/wiki/Georgia_%28typeface%29">Georgia</a> as a backup. It's quite different, but it still has the same classy and slightly informal feel. Unfortunately, I think it's a bit too simple, and it feels very ancient.</p>
+
+<p>I took unusually great care, also, in selecting font faces and styles for headings. The words "Max's Blog" on the top, as well as the navigational icons, are in <a href="http://new.myfonts.com/fonts/exljbris/museo/">Museo 700</a>, a beautiful, nuanced, curvacious modern font that's offered for free on the internet. The rest of the headings, more closely associated with the content, are in the same face as the content, but I decided to go with ALL CAPS for comment headings and <i>italics</i> for the rest.</p>
+
+<p>I have never been very good at choosing colors, which is why my color scheme is boring black and grey. At some point, I will explore other options. In fact, I was thinking about making it so that each post would give the bar at the top of the page a different color. This is something I am still thinking on. One of the best things about having a blog that I've entirely coded by hand is that I will always be able to tweak things to exactly how I want them, instead of being forced into some other designer or developer's way of thinking. Not that I am against teamwork, but this is my personal blog, and I want it to exude my personality, not someone else's.</p>
+
+<h3>The features (or lack thereof)</h3>
+
+<p>I've cut back quite a bit from what WordPress offers. I cannot tag or categorize my posts, there is no semblance of a sidebar, and there is no search feature. In return, this blog has gained speed and character. The important things are still here: I can write posts, people can comment on them, and people can subscribe to this blog in a feed reader. I also broke down and included what seemed like necessities: an "about" page and an "archives" page.</p>
+
+<p>When I put the new blog online, I was surprised to immediately start recieving spam comments. Naively, I had assumed that because I was using homebrew blogging software, I would be free of spam. One of the things I really loved about WordPress was <a href="http://akismet.com/">Akismet</a>, which was magically able to prevent spam comments from getting on my blog. So, with some PHP magic, I was able to incorporate Akismet into my new blog, and live free of spam again. Finally, to add some visual interest to the comments section, I implemented <a href="http://en.gravatar.com/">Gravatar</a> support.</p>
+
+<p>Eventually, I will be releasing my blogging software as open source. But before then, I should probably be nice and write a backend... at this point I'm just typing up blog entries in a text editor and putting them in my database by hand. This is a workflow that works fine for me right now, so I probably won't be rushing to get an admin section done, but it's in my "future projects" radar.</p>
+
+<p><em>Photo credits: I made both of these images, but the WordPress gravestone one uses the WordPress logo, licensed under the <a href="http://wordpress.org/about/gpl/">GNU General Public License</a>, as well as an image taken by <a href="http://www.flickr.com/photos/amunivers/">AmUnivers</a> on Flickr titled "<a href="http://www.flickr.com/photos/amunivers/199008242/">Sauron's eye</a>," licensed with a Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">Attribution-Noncommercial-Share Alike 2.0 Generic</a> license.</em></p>		</div>
+		<div id="comments" name="comments">
+			<h2>Comments on this post</h2>
+						<div class="comment">
+			  <div class="comment_icon"><img src="http://www.gravatar.com/avatar/695b9111a00bb5e8e410bb138f483e05&amp;d=identicon&amp;s=40&amp;r=r" alt="Etan's gravatar"></div>
+				<div class="comment_text">Hey Max,<br><br>
+Welcome back :) You went a bit further than me, I just emailed Mark and got permission to copy his layout.</div>
+				<div class="comment_from">From
+				  <a href="http://www.toomuchsexy.org/">Etan</a>				  on July 16th, 2009.</div>
+			</div>
+						<div class="comment">
+			  <div class="comment_icon"><img src="http://www.gravatar.com/avatar/3845e4cf6cdf16b32a3bacea77e1397f&amp;d=identicon&amp;s=40&amp;r=r" alt="RobotGrrl's gravatar"></div>
+				<div class="comment_text">Max- your site looks awesome!<br><br>
+Good job, and well done. :)</div>
+				<div class="comment_from">From
+				  <a href="http://robotgrrl.com">RobotGrrl</a>				  on July 21st, 2009.</div>
+			</div>
+						<div class="comment">
+			  <div class="comment_icon"><img src="http://www.gravatar.com/avatar/06014f0bd9717ea52a472f8111131bb5&amp;d=identicon&amp;s=40&amp;r=r" alt="ImmodaCaphono's gravatar"></div>
+				<div class="comment_text">MsuOlr north face outletSwdPke north face ukYlbCyw north face mensTbbEex north face windstopperSrfSug north face jacket saleVlmWnp the north face saleEpaZbm north face vestsEytBba north face clothingRzkYfq the north face outletVroHsh north face saleTdzFtb cheap north face jackets saleXbfIvl north face coats saleQbvLkg north face denaliPqiVro the north face outletEjtHda north face saleEyiHru cheap north face triclimateZvyAvx north face coats<br>
+</div>
+				<div class="comment_from">From
+				  <a href="http://www.northfacejacketforsale.co.uk/">ImmodaCaphono</a>				  on December 17th at 11:47 pm.</div>
+			</div>
+						<div class="comment">
+			  <div class="comment_icon"><img src="http://www.gravatar.com/avatar/fff4416490664d6bce0250f1e933db5c&amp;d=identicon&amp;s=40&amp;r=r" alt="inhavethate's gravatar"></div>
+				<div class="comment_text">Moncler Outlet Store <br>
+Canada Goose Jackets</div>
+				<div class="comment_from">From
+				  <a href="http://www.sherpa-walking-holidays.co.uk/monclerjackets.cfm%0D%0A">inhavethate</a>				  on December 18th at 9:37 pm.</div>
+			</div>
+						<h2>Leave your own comment</h2>
+			<form method="post" id="comment_form" name="comment_form" action="http://blog.maxedmands.com/comment.php?id=11">
+				<div class="field">
+					<label for="comment_name">Name:</label>
+					<input type="text" name="comment_name" id="comment_name" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_email">E-mail address:</label>
+					<input type="text" name="comment_email" id="comment_email" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_website">Web site (optional):</label>
+					<input type="text" name="comment_website" id="comment_website" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_text">Comment:</label>
+					<textarea name="comment_text" id="comment_text" class="text"></textarea><div class="field">
+				
+				<div class="field">
+					<input type="submit" value="Submit" id="submit">
+</div>
+				
+			
+		</div>
+		<div id="foot">
+			<p>&ldquo;<a href="http://blog.maxedmands.com/post/no-more-wordpress">No more WordPress</a>&rdquo; was posted on July 13th, 2009 at 3:31 am by <a xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" href="http://www.maxedmands.com">Max Edmands</a>. Except where otherwise noted, it is protected under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-6776776-2");
+	pageTracker._trackPageview();
+	} catch(err) {}</script><!-- Piwik --><script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.analytics.maxedmands.com/" : "http://www.analytics.maxedmands.com/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+	</script><noscript><p><img src="http://www.analytics.maxedmands.com/piwik.php?idsite=1" style="border:0" alt=""></p></noscript>
+	<!-- End Piwik Tracking Tag -->
+
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4ef05731613f5d082a000008');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+</form>
+</div>
+</div>

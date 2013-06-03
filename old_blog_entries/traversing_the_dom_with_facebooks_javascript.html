@@ -1,0 +1,170 @@
+<div id="wrapper">		<div id="entry">
+						<div id="prev_button">
+				<a href="http://blog.maxedmands.com/post/no-more-wordpress"><img src="http://blog.maxedmands.com/prev.gif" alt="Previous post" title="No more WordPress"></a>
+			</div>
+						<div id="next_button">
+				<a href="http://blog.maxedmands.com/post/google-suggest-poetry"><img src="http://blog.maxedmands.com/next.gif" alt="Next post" title="Use for Google Suggest: Outsource your poetry"></a>
+			</div>
+						
+			<h1>Traversing the DOM with Facebook's JavaScript</h1>
+			<style type="text/css">
+<!--
+pre.code {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #eee;
+  font-size: 95%;
+  line-height: 1.3em;
+}
+
+pre.code .comment {
+  color: #090;
+}
+
+pre.code .function {
+  font-weight: bold;
+  color: #900;
+}
+
+pre.code .identifier {
+  color: #009;
+}
+-->
+</style>
+<p>This summer, I am developing a Facebook application. It's for my honors thesis; I'm keeping the details a secret for now. I've been messing around with Facebook's API, and for the most part I think it's very developer-friendly and awesome. At least, until you start trying to modify your own DOM elements using <a href="http://wiki.developers.facebook.com/index.php/FBJS">FBJS</a>, Facebook's filtered version of JavaScript.</p>
+
+<p>For most of the JavaScript programming I do these days, I make use of <a href="http://jquery.com/">jQuery</a>, a library that simplifies the otherwise extremely tedious task of traversing through DOM elements, because the traversal functions JavaScript supplies by default are woefully lacking. Unfortunately, it is impossible to use jQuery (or another JavaScript library like <a href="http://www.prototypejs.org/">Prototype</a>) with FBJS, because Facebook modifies all the identifiers in my code, prepending them with the Facebook application ID. This means that it's impossible to get to basic JavaScript objects like <code>window</code> or <code>document</code>.</p>
+
+<h3>What Facebook gives you</h3>
+
+<p>In FBJS, you get six functions that you can call on a DOM element that give you other DOM elements: <code>getParentNode()</code>, <code>getNextSibling()</code>, <code>getPreviousSibling()</code>, <code>getFirstChild()</code>, <code>getLastChild()</code>, and <code>getChildNodes()</code>. They mirror the default JavaScript DOM element calls. FBJS also gives you <code>document.getElementById()</code> and <code>getRootElement()</code> to give you a starting point for DOM traversal. These functions are helpful, but not as helpful as they could or should be, especially when you consider one of the tips in the Facebook Developer's Wiki:</p>
+
+<blockquote>Don't create JavaScript which depends on a sensitive DOM structure. Code like <code>this.getElementByTagName('div')[1].getFirstChild().getLastChild().setStyle('color', 'white')</code> is very fragile and may randomly break if we change the way certain elements are rendered.</blockquote>
+
+<p>What is a hapless developer to do? Using only these functions, the only way I can get to specific DOM elements within a complicated structure is by creating long expressions like the one above. Which is exactly what I was warned against doing. Also, the code is really difficult to read.</p>
+
+<h3>The solution: A FBJS library</h3>
+
+<p>Well, that's a good ultimate goal. Until someone develops FBJQuery (it really is a good idea!), I'd like to share some FBJS functions with you that might help. <code>children()</code> lets you drill down through the DOM tree and collect all elements that have a specific class name and returns them as an array, and <code>closestParent()</code> lets you drill up through the DOM tree, returning the closest parent with a specific class name. Feel free to use them at your leisure, or modify them at your leisure, under my Creative Commons license:</p>
+
+<pre class="code">
+<span class="comment">/*
+Mirrors the behavior of document.getElementById(name),
+but it's shorter and prettier
+*/</span>
+function <span class="function">$(name)</span> {
+  return <span class="identifier">document</span>.getElementById(<span class="identifier">name</span>);
+}
+
+<span class="comment">/*
+returns an array of all descendants of element
+that have class "classname"
+*/</span>
+function <span class="function">children(element, classname)</span> {
+  var <span class="identifier">list</span> = [];
+  
+  function <span class="function">accumulateChildren(root)</span> {
+    var <span class="identifier">node</span> = <span class="identifier">root</span>.getFirstChild();
+    while(<span class="identifier">node</span> != null) {
+      if(<span class="identifier">node</span>.hasClassName(<span class="identifier">classname</span>)) {
+        <span class="identifier">list</span>.push(<span class="identifier">node</span>);
+      }
+      accumulateChildren(<span class="identifier">node</span>);
+      <span class="identifier">node</span> = <span class="identifier">node</span>.getNextSibling();
+    }
+  }
+  
+  accumulateChildren(<span class="identifier">element</span>);
+  return <span class="identifier">list</span>;
+}
+
+<span class="comment">/*
+gets the closest ancestor of an element
+that has class "classname"
+*/</span>
+function <span class="function">closestParent(element, classname)</span> {
+  <span class="identifier">element</span> = <span class="identifier">element</span>.getParentNode();
+  
+  while(<span class="identifier">element</span> != null) {
+    if(<span class="identifier">element</span>.getClassName() == <span class="identifier">classname</span>) {
+      return <span class="identifier">element</span>;
+    }
+    <span class="identifier">element</span> = <span class="identifier">element</span>.getParentNode();
+  }
+  return null;
+}
+</pre>
+
+<p>They're not much, but I hope these functions are helpful.</p>
+
+<p><b>Update:</b> It looks like there's an open source project going to port JQuery to FBJS! I'm so happy! It's called <a href="http://code.google.com/p/fbjqry/">fbjqry</a>, but it hasn't been updated recently.</p>		</div>
+		<div id="comments" name="comments">
+			<h2>Comments on this post</h2>
+						<p>No comments yet.</p>
+						<h2>Leave your own comment</h2>
+			<form method="post" id="comment_form" name="comment_form" action="http://blog.maxedmands.com/comment.php?id=12">
+				<div class="field">
+					<label for="comment_name">Name:</label>
+					<input type="text" name="comment_name" id="comment_name" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_email">E-mail address:</label>
+					<input type="text" name="comment_email" id="comment_email" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_website">Web site (optional):</label>
+					<input type="text" name="comment_website" id="comment_website" class="text">
+</div>
+				
+				<div class="field">
+					<label for="comment_text">Comment:</label>
+					<textarea name="comment_text" id="comment_text" class="text"></textarea><div class="field">
+				
+				<div class="field">
+					<input type="submit" value="Submit" id="submit">
+</div>
+				
+			
+		</div>
+		<div id="foot">
+			<p>&ldquo;<a href="http://blog.maxedmands.com/post/fbjs-dom-traversal">Traversing the DOM with Facebook's JavaScript</a>&rdquo; was posted on July 14th, 2009 at 11:15 pm by <a xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" href="http://www.maxedmands.com">Max Edmands</a>. Except where otherwise noted, it is protected under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">Creative Commons Attribution-Share Alike 3.0 United States License</a>.</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-6776776-2");
+	pageTracker._trackPageview();
+	} catch(err) {}</script><!-- Piwik --><script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.analytics.maxedmands.com/" : "http://www.analytics.maxedmands.com/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+	</script><noscript><p><img src="http://www.analytics.maxedmands.com/piwik.php?idsite=1" style="border:0" alt=""></p></noscript>
+	<!-- End Piwik Tracking Tag -->
+
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4ef05731613f5d082a000008');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+</form>
+</div>
+</div>
