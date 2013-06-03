@@ -5,13 +5,14 @@ title: Notes &amp; Writing | Max Edmands
 <section id="notes">
   <hgroup>
     <h1>Notes &amp; Writing</h1>
-    <h2>I might add to this page every once in a while.</h2>
+    <h2>Some thoughts about food, the environment, and technology.</h2>
   </hgroup>
   {% for post in site.categories.notes %}
   <article>
     <header>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     </header>
+    <p>{{ post.excerpt }}</p>
   </article>
   {% endfor %}
 </section>
