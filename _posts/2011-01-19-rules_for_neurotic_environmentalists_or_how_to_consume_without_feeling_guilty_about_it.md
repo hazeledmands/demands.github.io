@@ -162,6 +162,6 @@ process / assuage your environmentally-induced guilty conscience:
 [84]: http://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance 
 [85]: http://en.wikipedia.org/wiki/Robert_M._Pirsig 
 [86]: http://www.epicurious.com/recipes/food/views/Braised-Beef-Cheeks-107803 
-[87]: http://blog.maxedmands.com/post/treehuggers-are-not-effective-environmentalists 
+[87]: http://maxedmands.com/notes/2010/06/20/treehuggers_are_not_effective_environmentalists.html
 [88]: http://www.storyofstuff.com/blog/?p=92 
 [89]: http://www.secret-life.org/cellphones/cell_environment.php 
