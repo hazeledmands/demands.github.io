@@ -186,7 +186,6 @@ body {
 
 #container > header hgroup a {
   display: block;
-  float: left;
 }
 
 #container > header hgroup h1 {
@@ -197,14 +196,10 @@ body {
   height: 110px;
 }
 
-#container > header hgroup a:hover h1 {
-  margin-left: 2px;
-}
-
 #container > header nav {
-  float: right;
   font-size: 133%;
   padding: 10px;
+  margin-top: 20px;
 }
 
 #container > header nav a {
@@ -214,15 +209,6 @@ body {
   width: 225px;
   height: 32px;
   overflow: hidden;
-  margin-left: auto;
-}
-
-#container > header nav a:hover {
-  margin-right: 2px;
-}
-
-#container > header nav a:active {
-  margin-right: 4px;
 }
 
 #container nav .essays-link {
@@ -235,7 +221,7 @@ body {
 
 #container > section {
   clear: both;
-  padding-top: 11em;
+  padding-top: 250px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -262,7 +248,7 @@ body {
 }
 
 #about_me {
-  background: url(../img/about_bg/letchworth.jpg) center bottom no-repeat;
+  background: hsl(186, 19%, 89%) url(../img/about_bg/letchworth.jpg) center bottom no-repeat;
   overflow: hidden;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -364,9 +350,35 @@ body {
 
 /* @end */
 
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 454px) {
 
+  #container > header hgroup {
+    float: left;
+  }
 
+  #container > header nav {
+    float: right;
+  }
+
+  #container > header nav a {
+    margin-left: auto;
+  }
+
+  #container > header hgroup a:hover h1 {
+    margin-left: 2px;
+  }
+
+  #container > header nav a:hover {
+    margin-right: 2px;
+  }
+
+  #container > header nav a:active {
+    margin-right: 4px;
+  }
+
+  #container > section {
+    padding-top: 150px;
+  }
 
 }
 
