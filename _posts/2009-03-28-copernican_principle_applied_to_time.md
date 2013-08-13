@@ -20,7 +20,7 @@ layout: note
 > succumbing to the propensity to overestimate
 > the importance of our own era?
 
-&emdash; [Dan Bertolet][0]
+&ndash; [Dan Bertolet][0]
 
 The [Copernican Principle][1], in simplest possible terms, states that we are not special. Earth is not at the center of the universe, and human civilization may not be at the high water mark that we think we’re at.
 
