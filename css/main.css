@@ -130,6 +130,28 @@ body {
   background: #000;
 }
 
+.skipnav a {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skipnav a:focus, .skipnav a:active {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  text-decoration: underline;
+  background: white;
+  z-index: 5;
+  padding: 4px;
+  font-size: 120%;
+}
+
 .response {
   border: 2px solid #ccc;
   background: #fff;
@@ -224,20 +246,20 @@ body {
 
 /* @end */
 
-#container > section {
+#content > section {
   clear: both;
   padding-top: 140px;
   max-width: 700px;
   margin: 0 auto;
 }
 
-#container > section:after {
+#content > section:after {
   content: "";
   display: block;
   clear: both;
 }
 
-#container > section hgroup {
+#content > section hgroup {
 	padding-bottom: 15px;
 	padding-top: 15px;
 	margin: 15px;
@@ -246,7 +268,7 @@ body {
 	text-align: center;
 }
 
-#container > section hgroup h2 {
+#content > section hgroup h2 {
 	margin-top: 0.5em;
 	font-size: 140%;
 	font-weight: 100;
@@ -388,10 +410,6 @@ body {
 
   #container > header nav a:active {
     margin-right: 4px;
-  }
-
-  #container > section {
-    padding-top: 150px;
   }
 
 }
