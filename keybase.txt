@@ -1,0 +1,64 @@
+==================================================================
+https://keybase.io/thismax
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.maxedmands.com
+  * I am thismax (https://keybase.io/thismax) on keybase.
+  * I have a public key with fingerprint B9C6 25E3 932A 481E FC9C  6F75 6E1C 2555 9105 0743
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "b9c625e3932a481efc9c6f756e1c255591050743",
+            "host": "keybase.io",
+            "key_id": "6e1c255591050743",
+            "uid": "203dc5fa0f73de3dcce20ec905d3bb00",
+            "username": "thismax"
+        },
+        "service": {
+            "hostname": "www.maxedmands.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408076002,
+    "expire_in": 157680000,
+    "prev": "1c35033d9d268dcbd408895f724a524b5eb7f3b57ce7c95aaf622ea6d59f6638",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFtkV1IFFEUx3fXrzSlhSARBHXSerF1dmbvfKxCkFTQW0YPIrjN3LmzTroz6+y4
+q63fgrgp2WaZlkRShElEZUXhwwYqFtb2QUL4EGVESYQVamBa3RF7677ce8/5/f/n
+HM7pjASLzapmFxyNJqWUWmce/RQtR752LYQJUZMaCHeYqEYbl6yoXqT7dUU1CDch
+8pChAKJ5mhJcnBPJEAdkFjDICSkAAO8kAcm6aKKQqNICpgLbiEIAORQNx/DHo0g4
++h++biNBkbQEgSyQMktLCL8hokgEeRJItCiSpAkGkK4KPoRpo0oJ+IR6oqmQwMGg
+ApHZsll5EwiFQg4MIMknqFLAATUfNvDrmqFBrQbnqwzD7zblRoN/g0eiZ9PJIyqq
+hIfHgiDSA4qmEm4nJqGhmNZOF8mRLEOSVCGB6v2KjjyKSQCW4Uh8zDIoiC2dkAYk
+TUu8RDGcBEUJCzkeyCzlEgDlEgESWZkWAQsRC3kgCDJDUUhgJMDLDENzhDlbraoR
+bga3KXixZUDxqoJRpyOiKS1izU60WG2W5CSbuT9LWqr931ZfSSmrCfve/v7wuDG1
+5GmrPXzf5eve0qPkLVei6MzEyNn9v7r26gdzSuZz33X0FvpOGPnR4uWPu+9cXzlQ
+9mlX+1h/ra9trPd26ZX16csxMJD77fCFaMXFlQpuNhZcfRD+0bc8tbX9zeCwXHBo
+uOh1deUtqibLfnJiCr5MGadqk+cmz2z/cy5MZ15bz29Ja2y+tEe+G/r8fjC+I97S
+NxR2DhfdGH1xPJ7h+L5YzEb6b65pQx3dXHtkYKm/N+/8dE99vGwxY66lc2GnbexZ
+a1bOZHmd+gRclcu8S5mxxG0JM8dGG7T05nEwf0/N7Ik1x8s7R061sV9C3Wtauj4b
+sS89f/gX
+=UWGB
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/thismax
+
+==================================================================
