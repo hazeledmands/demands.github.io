@@ -6,18 +6,27 @@ I hereby claim:
 
   * I am an admin of http://www.maxedmands.com
   * I am thismax (https://keybase.io/thismax) on keybase.
-  * I have a public key with fingerprint B9C6 25E3 932A 481E FC9C  6F75 6E1C 2555 9105 0743
+  * I have a public key with fingerprint A89C AD49 0A47 8485 A842  7470 E6A8 709B 2081 23FA
 
 To claim this, I am signing this object:
 
 {
     "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.5"
+        },
         "key": {
-            "fingerprint": "b9c625e3932a481efc9c6f756e1c255591050743",
+            "fingerprint": "a89cad490a478485a8427470e6a8709b208123fa",
             "host": "keybase.io",
-            "key_id": "6e1c255591050743",
+            "key_id": "E6A8709B208123FA",
             "uid": "203dc5fa0f73de3dcce20ec905d3bb00",
             "username": "thismax"
+        },
+        "merkle_root": {
+            "ctime": 1424039040,
+            "hash": "4e98a68942d8a255cc169bfc148401a54efe2d67a516e643d667b423d3c44908017daea32f5d581b96c4ef97a46f07e12deca0efcaa623720453b8417bf7b1e2",
+            "seqno": 156030
         },
         "service": {
             "hostname": "www.maxedmands.com",
@@ -26,34 +35,37 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1408076002,
+    "ctime": 1424039187,
     "expire_in": 157680000,
-    "prev": "1c35033d9d268dcbd408895f724a524b5eb7f3b57ce7c95aaf622ea6d59f6638",
-    "seqno": 6,
+    "prev": "7a64978f5b6021c7830a0b3a25407c59e613784c8a07438e7b7c7bd6d41dcd97",
+    "seqno": 25,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the PGP signature:
 
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v1
 
-owFtkV1IFFEUx3fXrzSlhSARBHXSerF1dmbvfKxCkFTQW0YPIrjN3LmzTroz6+y4
-q63fgrgp2WaZlkRShElEZUXhwwYqFtb2QUL4EGVESYQVamBa3RF7677ce8/5/f/n
-HM7pjASLzapmFxyNJqWUWmce/RQtR752LYQJUZMaCHeYqEYbl6yoXqT7dUU1CDch
-8pChAKJ5mhJcnBPJEAdkFjDICSkAAO8kAcm6aKKQqNICpgLbiEIAORQNx/DHo0g4
-+h++biNBkbQEgSyQMktLCL8hokgEeRJItCiSpAkGkK4KPoRpo0oJ+IR6oqmQwMGg
-ApHZsll5EwiFQg4MIMknqFLAATUfNvDrmqFBrQbnqwzD7zblRoN/g0eiZ9PJIyqq
-hIfHgiDSA4qmEm4nJqGhmNZOF8mRLEOSVCGB6v2KjjyKSQCW4Uh8zDIoiC2dkAYk
-TUu8RDGcBEUJCzkeyCzlEgDlEgESWZkWAQsRC3kgCDJDUUhgJMDLDENzhDlbraoR
-bga3KXixZUDxqoJRpyOiKS1izU60WG2W5CSbuT9LWqr931ZfSSmrCfve/v7wuDG1
-5GmrPXzf5eve0qPkLVei6MzEyNn9v7r26gdzSuZz33X0FvpOGPnR4uWPu+9cXzlQ
-9mlX+1h/ra9trPd26ZX16csxMJD77fCFaMXFlQpuNhZcfRD+0bc8tbX9zeCwXHBo
-uOh1deUtqibLfnJiCr5MGadqk+cmz2z/cy5MZ15bz29Ja2y+tEe+G/r8fjC+I97S
-NxR2DhfdGH1xPJ7h+L5YzEb6b65pQx3dXHtkYKm/N+/8dE99vGwxY66lc2GnbexZ
-a1bOZHmd+gRclcu8S5mxxG0JM8dGG7T05nEwf0/N7Ik1x8s7R061sV9C3Wtauj4b
-sS89f/gX
-=UWGB
+owFVkmtoHFUUxzfbGtNA1RBBqTaJU4pV4ua+5t470YrpI22IJWojUiyu9zXJbHdn
+tjPTPKyrraDi236oomK1gsWClFhNNPhRC4FEqGKLaH1bY63QGkFUfN2JEe18unPP
+7/zP+Z97nly6KJev+/aV6nNtu1f8Vjd9Sub6v1zevNORkR51Onc6qhyYMM1OoagY
+p9PZZkalSEwhiNrCSJtCKWlbYNqdIRMnQRRaChRYwXVq7RmeJftBOGDiahxkWo7g
+nhKaeEAQxgl3BSeIEQYMFZwBTyLAIcK+sJKDUZKeU9WZ1ywG2t6up10Zv+YfvrvL
+xnbMBxDAWrm+AD7D2tizMggY5QFXYykByMDExAuW0sEgqYiRrN2KibeVTTGOonnP
+Kg0yAhJEAPYAAbYhkQzaHGI8Lij3CNJcINdVClJP+goSTgAULjG+QZoy4UJqKMGa
+UiYJwhorYo1zAJkWRmDku9rlUHpU2RSPCUJ9wAxE2igBjK+EoAgzBIiLJSeQSZ9J
+aJB1kJjtYWSbcynAoJb9x0OBMlnf2dQWzA0PDxesOaMrItRJQUUVm1qNozRSUdnG
+B9O02plZT0erln/dGTayuCBVlEGo7cv9/2mhRc8dC+Ss3TEj1SA2xSAjXEY5sF9W
+xwzZGkxQ4jHuu5ICBBXjGAggsZ0bAUy5nqEQ20VQXABGMDdMMsWkpppArbTH/jOL
+XNuoGLCaSTAQinRHbJzaQ3WXL87V5XP15+Wz5c01Lrno340+M96QO/Ds7CMb0Kne
+Px74/tcVhb1nb31sIyv3HYHvzF3Y9MPNT+y97MjkzJ+tL3Stu6Tr5O7mm9a+v+zo
+U3NTF6+Rh5y3rs9verN3665Lf77b+Wj8a/P7o9d1f96DzUF8Y9vkfpFv+XDj+TM9
+499NLf9p+vbmK/4q3lPqfPjBtSfeuGCqNHa8fnalnLk26L2ycdX2rWc/bhkfbWwY
+23Jw8sQ3Irf4wLt7fux56ZfXJro/WCofb/30xQ33v32m7/DYV/1xQ7PTsampJkpN
+vGM6rNy2cqS/9QayqP35VzvuPfqMrl+9ec/6L17ef8fsJ9MT3um5/r5jpeCu46vu
+u/rOfauvOn2stq9lYsuuk7d8do2/7un3Dpf/Bg==
+=EQGi
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
