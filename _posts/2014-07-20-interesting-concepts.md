@@ -32,3 +32,13 @@ experience of the universe and the only way we have of understanding it, since
 everything that we sense about it travels through the filter of our brain first.
 - [Buster Benson's *Codex
   Vitae*](https://github.com/busterbenson/public/blob/master/Codex.md#soloverse)
+
+## Uchronia
+A hypothetical or fictional time-period of our world, similar to "alternate
+history" but different in the manner that uchronic times are not easily defined.
+See: "Merrie Olde England", the entire concept of "Steampunk", or even
+"Cyberpunk" at this point (an alternate vision of the 1990's and early 2000's
+where technology and the internet affected the world a whole lot differently
+than it actually has). Of course, now there's even an online ["Uchronia
+bibliography"](http://www.uchronia.net/) -- a curated collection of alternate
+histories. - [Wikipedia](http://en.wikipedia.org/wiki/Uchronia)
