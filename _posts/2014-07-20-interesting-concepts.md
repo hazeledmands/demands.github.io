@@ -2,7 +2,7 @@
 title: "A collection of interesting concepts"
 category: notes
 layout: note
-excerpt: "In my travels, I keep bumping into a few concepts that amuse me. I share them here."
+excerpt: "In my travels, I keep bumping into a few concepts; lingustic oddities that amuse me. I share them here."
 ---
 
 ## Headcanon
