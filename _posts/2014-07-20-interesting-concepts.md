@@ -5,6 +5,11 @@ layout: note
 excerpt: "In my travels, I keep bumping into a few concepts; lingustic oddities that amuse me. I share them here."
 ---
 
+## Decideratum
+An indispensable thing, a thing that is needed or wanted. Plural: *desiderata*.
+- h.t. [The history of UTF-8 as told by Rob
+  Pike](http://doc.cat-v.org/bell_labs/utf-8_history)
+
 ## Headcanon
 Headcanon is an idea, belief or aspect of a character’s personality or
 physicality that is present in a piece of fanwork that does not correspond with
